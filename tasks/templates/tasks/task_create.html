@@ -1,0 +1,12 @@
+<h1>Создать задачу</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Название:</label>
+    <input type="text" name="title" required>
+    <br>
+    <label>Описание:</label>
+    <textarea name="description"></textarea>
+    <br>
+    <button type="submit">Создать</button>
+</form>
+<a href="{% url 'task_list' %}">Назад</a>
